@@ -11,13 +11,13 @@ function App() {
 
   const fetchContent = async (url) => {
     setLoading(true);
-    const res = await axios.post('http://localhost:5000/extract', { url });
+    const res = await axios.post('https://ai-powered-content-extractor-axzm.onrender.com/extract', { url });
     setData(prev => [res.data, ...prev]);
     setLoading(false);
   };
 
   const loadData = async () => {
-    const res = await axios.get('http://localhost:5000/entries');
+    const res = await axios.get('https://ai-powered-content-extractor-axzm.onrender.com/entries');
     setData(res.data);
   };
 
