@@ -5,6 +5,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import Entry from './models/Entry.js';
+import { convert } from 'html-to-text';
+
 
 dotenv.config();
 
